@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 220 20% 20%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 220 20% 20%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 20% 20%;
+
+    /* Brand blue - vibrant and professional */
+    --primary: 217 91% 60%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 220 14% 96%;
+    --secondary-foreground: 220 20% 20%;
+
+    --muted: 220 14% 96%;
+    --muted-foreground: 220 10% 46%;
+
+    --accent: 217 91% 60%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --ring: 217 91% 60%;
+
+    --radius: 0.75rem;
+
+    /* Chat specific */
+    --chat-user-bg: 217 91% 60%;
+    --chat-user-fg: 0 0% 100%;
+    --chat-bot-bg: 220 14% 96%;
+    --chat-bot-fg: 220 20% 20%;
+
+    /* Sidebar blue gradient */
+    --sidebar-start: 217 91% 55%;
+    --sidebar-end: 230 85% 45%;
+
+    --sidebar-background: 217 91% 55%;
+    --sidebar-foreground: 0 0% 100%;
+    --sidebar-primary: 0 0% 100%;
+    --sidebar-primary-foreground: 217 91% 55%;
+    --sidebar-accent: 217 80% 65%;
+    --sidebar-accent-foreground: 0 0% 100%;
+    --sidebar-border: 217 80% 65%;
+    --sidebar-ring: 0 0% 100%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    font-family: 'Inter', sans-serif;
+  }
+}
+
+@layer utilities {
+  .sidebar-gradient {
+    background: linear-gradient(180deg, hsl(217 91% 55%) 0%, hsl(230 85% 45%) 100%);
+  }
+
+  .chat-scrollbar::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  .chat-scrollbar::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  .chat-scrollbar::-webkit-scrollbar-thumb {
+    background: hsl(220 13% 85%);
+    border-radius: 3px;
+  }
+
+  .chat-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: hsl(220 13% 75%);
+  }
+}
